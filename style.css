@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  font-family: "Montserrat", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 15vh;
+}
+
+.container {
+    width: 60%;
+    height: 60vh;
+    background-color: #41b985;
+    padding: 40px 60px 40px 60px;
+    display: flex;
+    column-gap: 40px;
+    border-radius: 6px;
+    box-shadow: 0px 3px 50px #00000040;
+}
+
+.container div {
+    width: 50%;
+    background-color: white;
+    border-radius: 6px;
+}
+
+/* ESTILOS DEL PANEL PRINCIPAL */
+.container .panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.panel  .panel-container{
+    width: 100%;
+    text-align: center;
+}
+.panel  .panel-container h2{
+    width: 100%;
+    font-size: 36px;
+    color: #41B985;
+    font-weight: 700;
+}
+.panel .panel-container #error{
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: #EC2C2C;
+}
+.panel .panel-container #worldInput{
+    margin-top: 5px;
+    width: 70%;
+    margin-bottom: 15px;
+    height: 35px;
+    border-radius: 6px;
+    background-color: #b0f4d6;
+    border: 0;
+    font-size: 16px;
+    text-align: center;
+}
+.panel .panel-container #try{
+    display: block;
+    width: 30%;
+    height: 30px;
+    border: none;
+    margin: 0 auto;
+    background-color: #41B985;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.panel .panel-container #try:hover{
+    cursor: pointer;
+    box-shadow: 0px 3px 15px #81e3b8;
+
+
+}
+.panel-container .counter{
+    margin-top: 80px;
+    width: 100%;
+}
+.panel-container .counter p{
+    color: #1F6B4A;
+    font-weight: 700;
+}
+.panel-container .counter span{
+    font-weight: 400;
+    display: block;
+    margin-bottom: 10px;
+}
+#reset{
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid #41B985;
+    height: 25px;
+    width: 90px;
+}
+#reset:hover{
+    background-color: #41B985;
+    color: white;
+    cursor: pointer;
+}
+
+/* FIN ESTILOS DEL PANEL PRINCIPAL */
+.game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.game #grid{
+    display: flex;
+    flex-direction: column;
+}
+.game #grid #row{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    column-gap: 5px;
+    margin-top: 5PX;
+}
+.game #grid #row #col{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+
+.yellow{
+    background-color: rgb(255, 255, 0) !important;
+}
+.green{
+    background-color: #41B985 !important;
+}
+.gray{
+    background-color: rgb(204, 204, 204) !important;
+}
+/* ESTILOS DEL PANEL GAME */
+
+
+.win{
+    display: none;
+    position: absolute;
+    left: auto;
+    right: auto;
+    text-align: center;
+    bottom: 20px;
+    background-color:  #41B985;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px #00000040;
+
+}
+.win p{
+    font-size: 60px;
+    font-weight: 800;
+    color: white;
+}
+
+.gameOver{
+    display: none;
+    position: absolute;
+    left: auto;
+    right: auto;
+    text-align: center;
+    bottom: 20px;
+    background-color: rgb(120, 119, 119);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px #00000040;
+
+}
+.gameOver p{
+    font-size: 60px;
+    font-weight: 800;
+    color: white;
+}
