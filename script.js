@@ -2,11 +2,15 @@ var error = document.querySelector("#error");
 var grid = document.getElementById("grid");
 var intentosSpan = document.querySelector(".counter span");
 var worldInput = document.querySelector("#worldInput");
-
+let palabra = "";
+let palabras = ["ETNIA","ACERO","AVENA","NOCHE","DOLOR","NARIZ","JUEGO"];
 gameOverDiv = document.querySelector(".gameOver");
 winDiv = document.querySelector(".win");
 
-let palabra = "APPLE";
+palabra = palabras[(Math.random()*6).toFixed(0)];
+
+console.log(palabra);
+
 let intentos = 6;
 
 function comprobar() {
@@ -49,8 +53,7 @@ function comprobar() {
         gameOver();
       }
     }
-
-}
+  }
   worldInput.value = "";
 }
 
@@ -59,16 +62,17 @@ function gameOver() {
   worldInput.disabled = true;
 }
 function win() {
-    winDiv.style.display = "block";
-    worldInput.disabled = true;
+  winDiv.style.display = "block";
+  worldInput.disabled = true;
 }
 
 function reset() {
-    intentos = 6;
-    grid.innerHTML = "";
-    gameOverDiv.style.display = "none";
-    winDiv.style.display = "none";
-    intentosSpan.innerText = intentos;
-    worldInput.disabled = false;
+  intentos = 6;
+  grid.innerHTML = "";
+  gameOverDiv.style.display = "none";
+  winDiv.style.display = "none";
+  intentosSpan.innerText = intentos;
+  worldInput.disabled = false;
+  palabra = palabras[(Math.random()*6).toFixed(0)];
 
 }
