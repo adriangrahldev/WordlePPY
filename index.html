@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+   <div class="container">
+    <div class="panel">
+        <h2>Wordle PPY</h2>
+        <p id="error"></p>
+        <input type="text" id="word">
+        <button id="try">Intentar</button>
+        <div class="counter">
+            <p id="counter-title">Intentos Restantes</p>
+            <span>6</span>
+            <button id="reset">Reiniciar</button>
+        </div>
+    </div>
+    <div class="game">
+        <div class="grids">
+            <ul class="row">
+                <li>COSAS</li>
+                <li>VERDE</li>
+                <li>PANEL</li>
+            </ul>
+        </div>
+    </div>
+   </div>
+</body>
+</html>
