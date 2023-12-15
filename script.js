@@ -2,12 +2,11 @@ var error = document.querySelector("#error");
 var grid = document.getElementById("grid");
 var intentosSpan = document.querySelector(".counter span");
 var worldInput = document.querySelector("#worldInput");
-let palabra = "";
-let palabras = ["ETNIA","ACERO","AVENA","NOCHE","DOLOR","NARIZ","JUEGO"];
+var palabra = "";
+obtenerPalabra();
+
 gameOverDiv = document.querySelector(".gameOver");
 winDiv = document.querySelector(".win");
-
-palabra = palabras[(Math.random()*6).toFixed(0)];
 
 console.log(palabra);
 
@@ -66,6 +65,17 @@ function win() {
   worldInput.disabled = true;
 }
 
+function obtenerPalabra() {
+  fetch("https://random-word-api.herokuapp.com/word?lang=es&length=5").then(
+    async (data) => {
+      await data.json().then((json) => {
+        palabra = json[0].toUpperCase();
+        console.log(palabra);
+      });
+    }
+  );
+}
+
 function reset() {
   intentos = 6;
   grid.innerHTML = "";
@@ -73,6 +83,5 @@ function reset() {
   winDiv.style.display = "none";
   intentosSpan.innerText = intentos;
   worldInput.disabled = false;
-  palabra = palabras[(Math.random()*6).toFixed(0)];
-
+  obtenerPalabra()
 }
